@@ -13,4 +13,31 @@ const pickRandom = array => {
 
 let mixedMessage = `You're gonna ${pickRandom(action)} with ${pickRandom(celebrity)} ${pickRandom(place)} on a ${pickRandom(weather)} day !`;
 
+const monthArray= ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+const month = pickRandom(monthArray);
+
+let day = () => {
+    let randomDay;
+    if (month === "April" || month === "June" || month === "September" || month === "November") {
+        randomDay = Math.floor(Math.random() * 29) + 1;
+    } else if (month === "February") {
+        randomDay = Math.floor(Math.random() * 27) + 1;
+    } else {
+        randomDay = Math.floor(Math.random() * 30) + 1;
+    };
+    if (randomDay === 1) {
+        return "the first";
+    } else if (randomDay === 2) {
+        return randomDay + "nd";
+    } else if (randomDay === 3) {
+        return randomDay + "rd";
+    } else {
+        return randomDay + "th";
+    }
+};
+
+mixedMessage = mixedMessage.charAt(0).toLowerCase() + mixedMessage.slice(1);
+mixedMessage = "On " + month + " " + day() + ", " + mixedMessage;
+
 console.log(mixedMessage);
