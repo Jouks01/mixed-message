@@ -41,7 +41,7 @@ header h2 {
 }
 
 .background {
-    height: 120vh;
+    height: 100vh;
     width: 100%;
     background-image: url('./ressources/img/jason-leung-Xaanw0s0pMk-unsplash.jpg');
     background-size: cover;
@@ -66,7 +66,7 @@ header h2 {
 }
 
 #message {
-   background-color: rgba(0, 110, 110, 0.3);
+   background-color: rgba(0, 140, 180, 0.4);
    padding: 32px 12.5%;
    display: none;
    text-shadow: 1px 1px black;
@@ -102,19 +102,50 @@ header h2 {
 }
 
 @media only screen and (max-width: 900px) {
+    html {
+        font-size: 11px;
+    }
     header h1 {
         font-size: 6rem;
     }
     #message {
         padding: 32px 7.5%;
     }
+    .background {
+        height: 90vh;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     html {
-        font-size: 12px;
+        font-size: 8px;
     }
     #message {
         padding: 32px 5%;
+    }
+    header h1 {
+        line-height: 6vh;
+    }
+    header h2 {
+        line-height: 3vh;
+        font-size: 2.5rem;
+    }
+    header {
+        height: 190px;
+    }
+    .message-container button {
+        margin-top: 230px;
+        margin-bottom: 60px;
+        font-size: 3.5rem;
+    }
+    .message-container button:hover {
+        font-size: 4rem;
+    }
+    .message-container button:active {
+        margin-top: 235px;
+        margin-bottom: 55px;
+    }
+    .background {
+        height: 70vh;
     }
 }
