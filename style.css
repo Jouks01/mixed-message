@@ -108,11 +108,11 @@ header h2 {
     header h1 {
         font-size: 6rem;
     }
+    header h2 {
+        font-size: 3rem;
+    }
     #message {
         padding: 32px 7.5%;
-    }
-    .background {
-        height: 90vh;
     }
 }
 
@@ -124,28 +124,31 @@ header h2 {
         padding: 32px 5%;
     }
     header h1 {
+        font-size: 7rem;
         line-height: 6vh;
     }
     header h2 {
         line-height: 3vh;
-        font-size: 2.5rem;
     }
     header {
         height: 190px;
     }
     .message-container button {
-        margin-top: 230px;
-        margin-bottom: 60px;
+        margin-top: 220px;
+        margin-bottom: 45px;
         font-size: 3.5rem;
     }
     .message-container button:hover {
         font-size: 4rem;
     }
     .message-container button:active {
-        margin-top: 235px;
-        margin-bottom: 55px;
+        margin-top: 225px;
+        margin-bottom: 40px;
     }
-    .background {
-        height: 70vh;
+    #message {
+        padding: 16px 12.5%
+    }
+    .message-container {
+        font-size: 3.5rem;
     }
 }
