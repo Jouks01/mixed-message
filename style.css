@@ -25,7 +25,7 @@ header {
     position: absolute;
     z-index: 2;
     text-align: center;
-    box-shadow: 1px 1px 3px black;
+    box-shadow: 1px 1px 10px black;
     text-shadow: 2px 2px black;
 }
 
@@ -36,7 +36,7 @@ header h1 {
 }
 
 header h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     line-height: 4vh;
 }
 
@@ -66,10 +66,11 @@ header h2 {
 }
 
 #message {
-   background-color: rgba(0, 140, 180, 0.4);
+   background-color: rgba(0, 175, 180, 0.7);
    padding: 32px 12.5%;
    display: none;
-   text-shadow: 1px 1px black;
+   text-shadow: 0px 1px black;
+   box-shadow: 0 0 8px 1px rgb(130, 130, 130);
 }
 
 .message-container button {
@@ -83,18 +84,19 @@ header h2 {
     color: white;
     font-size: 2.5rem;
     font-family: "Parkinsans", sans-serif;
-    box-shadow: 0px 5px;
+    box-shadow: 0px 5px 5px rgb(68, 68, 68);
     text-shadow: 1px 1px black; 
 }
 
-.message-container button:hover {
-    background-color: rgba(2, 53, 180, 0.2);
-    cursor: pointer;
-    font-size: 2.7rem;
+@media (pointer: fine) {
+    .message-container button:hover {
+        background-color: rgba(0, 200, 255, 0.15);
+        cursor: pointer;
+        font-size: 2.7rem;
+    }
 }
-
 .message-container button:active {
-    background-color: rgba(0, 110, 150, 0.4);
+    background-color: rgba(255, 255, 255, 0.07);
     font-size: 2.5rem;
     box-shadow: 0px 0px;
     margin-top: 355px;
@@ -126,9 +128,6 @@ header h2 {
     header h1 {
         font-size: 7rem;
         line-height: 6vh;
-    }
-    header h2 {
-        line-height: 3vh;
     }
     header {
         height: 190px;
