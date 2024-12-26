@@ -6,16 +6,7 @@ const place = ["in a park", "on an island", "at the police station", "in a garag
 
 const weather = ["sunny", "rainy", "tornado", "stormy", "cloudy", "hurricane", "heat wave"];
 
-const pickRandom = array => {
-    const randomIndex = Math.floor(Math.random() * array.length);
-    return array[randomIndex];
-};
-
-let mixedMessage = `You're gonna ${pickRandom(action)} with ${pickRandom(celebrity)} ${pickRandom(place)} on a ${pickRandom(weather)} day !`;
-
-const monthArray= ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-const month = pickRandom(monthArray);
+const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 let day = () => {
     let randomDay;
@@ -34,10 +25,17 @@ let day = () => {
         return randomDay + "rd";
     } else {
         return randomDay + "th";
-    }
+    };
 };
 
-mixedMessage = mixedMessage.charAt(0).toLowerCase() + mixedMessage.slice(1);
-mixedMessage = "On " + month + " " + day() + ", " + mixedMessage;
+let randomMessage = function(){
+    const pickRandom = (array) => {
+        return array[Math.floor(Math.random() * array.length)];
+    };
+    return `On ${pickRandom(month)} ${day()}, you're going to ${pickRandom(action)} with ${pickRandom(celebrity)} ${pickRandom(place)} on a ${pickRandom(weather)} day !`;
+};
 
-console.log(mixedMessage);
+document.getElementById('message-button').onclick = function(){
+    document.getElementById('message').innerHTML = randomMessage();
+    document.getElementById('message').style.display = 'block';
+};
