@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: "Parkinsans", sans-serif;
+    font-size: 14px;
+}
+
+body {
+    background-color: #1D1F1E;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #001A6E;
+    color: white;
+    height: 280px;
+    width: 100%;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    box-shadow: 1px 1px 3px black;
+    text-shadow: 2px 2px black;
+}
+
+header h1 {
+    width: 90%;
+    font-size: 7rem;
+    line-height: 10vh;
+}
+
+header h2 {
+    font-size: 2rem;
+    line-height: 4vh;
+}
+
+.background {
+    height: 120vh;
+    width: 100%;
+    background-image: url('./ressources/img/jason-leung-Xaanw0s0pMk-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    position: absolute;
+    z-index: 0;
+}
+
+.message-container {
+    font-size: 4rem;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    text-align: center;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#message {
+   background-color: rgba(0, 110, 110, 0.3);
+   padding: 32px 12.5%;
+   display: none;
+   text-shadow: 1px 1px black;
+}
+
+.message-container button {
+    margin-top: 350px;
+    margin-bottom: 80px;
+    width: 240px;
+    height: 90px;
+    background-color: rgba(0, 80, 150, 0.1);
+    border-radius: 2rem;
+    border: 2px solid white;
+    color: white;
+    font-size: 2.5rem;
+    font-family: "Parkinsans", sans-serif;
+    box-shadow: 0px 5px;
+    text-shadow: 1px 1px black; 
+}
+
+.message-container button:hover {
+    background-color: rgba(2, 53, 180, 0.2);
+    cursor: pointer;
+    font-size: 2.7rem;
+}
+
+.message-container button:active {
+    background-color: rgba(0, 110, 150, 0.4);
+    font-size: 2.5rem;
+    box-shadow: 0px 0px;
+    margin-top: 355px;
+    margin-bottom: 75px;
+}
+
+@media only screen and (max-width: 900px) {
+    header h1 {
+        font-size: 6rem;
+    }
+    #message {
+        padding: 32px 7.5%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+    #message {
+        padding: 32px 5%;
+    }
+}
