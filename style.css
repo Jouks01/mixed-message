@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-color: #1D1F1E;
+    background-color: black;
 }
 
 header {
@@ -17,16 +17,12 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #001A6E;
     color: white;
-    height: 280px;
+    height: 240px;
     width: 100%;
-    opacity: 0.8;
     position: absolute;
     z-index: 2;
     text-align: center;
-    box-shadow: 1px 1px 10px black;
-    text-shadow: 2px 2px black;
 }
 
 header h1 {
@@ -43,10 +39,11 @@ header h2 {
 .background {
     height: 100vh;
     width: 100%;
-    background-image: url('./ressources/img/jason-leung-Xaanw0s0pMk-unsplash.jpg');
+    background-image: url('./ressources/img/pawel-czerwinski-W10XfpqLu4Y-unsplash.jpg');
     background-size: cover;
+    transform: rotate(180deg);
     background-repeat: no-repeat;
-    filter: blur(2px);
+    filter: blur(10px);
     position: absolute;
     z-index: 0;
 }
@@ -58,54 +55,59 @@ header h2 {
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: transparent;
-    text-align: center;
-    color: white;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
+    color: white;
+    text-align: center;
 }
 
 #message {
-   background-color: rgba(0, 175, 180, 0.7);
    padding: 32px 12.5%;
    display: none;
-   text-shadow: 0px 1px black;
-   box-shadow: 0 0 8px 1px rgb(130, 130, 130);
+   box-shadow: 0 0 8px 1px rgb(130, 130, 150);
 }
 
 .message-container button {
-    margin-top: 350px;
-    margin-bottom: 80px;
+    margin-top: 305px;
+    margin-bottom: 115px;
     width: 240px;
     height: 90px;
-    background-color: rgba(0, 80, 150, 0.1);
-    border-radius: 2rem;
+    background-color: rgba(49, 49, 49, 0.2);
     border: 2px solid white;
+    border-radius: 2rem;
     color: white;
     font-size: 2.5rem;
-    font-family: "Parkinsans", sans-serif;
     box-shadow: 0px 5px 5px rgb(68, 68, 68);
-    text-shadow: 1px 1px black; 
 }
 
-@media (pointer: fine) {
+@media only screen and (min-width: 1000px) {
     .message-container button:hover {
-        background-color: rgba(0, 200, 255, 0.15);
+        background-color: rgba(50, 186, 186, 0.2);
         cursor: pointer;
         font-size: 2.7rem;
     }
 }
 .message-container button:active {
-    background-color: rgba(255, 255, 255, 0.07);
+    background-color: rgba(50, 186, 186, 0.05);
     font-size: 2.5rem;
     box-shadow: 0px 0px;
-    margin-top: 355px;
-    margin-bottom: 75px;
+    margin-top: 310px;
+    margin-bottom: 110px;
+}
+
+@media only screen and (max-width: 1450px) {
+    html {
+        font-size: 11px;
+    }
+    #message {
+        padding: 24px 12.5%;
+    }
 }
 
 @media only screen and (max-width: 900px) {
     html {
-        font-size: 11px;
+        font-size: 10px;
     }
     header h1 {
         font-size: 6rem;
@@ -114,7 +116,7 @@ header h2 {
         font-size: 3rem;
     }
     #message {
-        padding: 32px 7.5%;
+        padding: 24px 7.5%;
     }
 }
 
@@ -123,7 +125,7 @@ header h2 {
         font-size: 8px;
     }
     #message {
-        padding: 32px 5%;
+        padding: 16px 5%;
     }
     header h1 {
         font-size: 7rem;
@@ -133,19 +135,16 @@ header h2 {
         height: 190px;
     }
     .message-container button {
-        margin-top: 220px;
-        margin-bottom: 45px;
+        margin-top: 215px;
+        margin-bottom: 50px;
         font-size: 3.5rem;
-    }
-    .message-container button:hover {
-        font-size: 4rem;
+        width: 180px;
+        height: 70px;
     }
     .message-container button:active {
-        margin-top: 225px;
-        margin-bottom: 40px;
-    }
-    #message {
-        padding: 16px 12.5%
+        margin-top: 220px;
+        margin-bottom: 45px;
+        font-size: 3.2rem;
     }
     .message-container {
         font-size: 3.5rem;
