@@ -41,9 +41,10 @@ header h2 {
     width: 100%;
     background-image: url('./ressources/img/pawel-czerwinski-W10XfpqLu4Y-unsplash.jpg');
     background-size: cover;
+    background-position-y: 30%;
     transform: rotate(180deg);
     background-repeat: no-repeat;
-    filter: blur(10px);
+    filter: brightness(60%);
     position: absolute;
     z-index: 0;
 }
@@ -65,35 +66,38 @@ header h2 {
 #message {
    padding: 32px 12.5%;
    display: none;
-   box-shadow: 0 0 8px 1px rgb(130, 130, 150);
+
 }
 
 .message-container button {
     margin-top: 305px;
-    margin-bottom: 115px;
+    margin-bottom: 80px;
     width: 240px;
     height: 90px;
-    background-color: rgba(49, 49, 49, 0.2);
+    background-color: rgba(0, 0, 0, 0.8);
     border: 2px solid white;
     border-radius: 2rem;
     color: white;
     font-size: 2.5rem;
     box-shadow: 0px 5px 5px rgb(68, 68, 68);
+    transition-duration: 50ms;
 }
 
 @media only screen and (min-width: 1000px) {
     .message-container button:hover {
-        background-color: rgba(50, 186, 186, 0.2);
         cursor: pointer;
-        font-size: 2.7rem;
+        font-size: 3rem;
+        border: 3px solid white;
+        box-shadow: 0px 5px 5px rgb(110, 110, 110)
     }
 }
 .message-container button:active {
-    background-color: rgba(50, 186, 186, 0.05);
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 5px 5px rgb(68, 68, 68);
     font-size: 2.5rem;
     box-shadow: 0px 0px;
     margin-top: 310px;
-    margin-bottom: 110px;
+    margin-bottom: 75px;
 }
 
 @media only screen and (max-width: 1450px) {
@@ -101,7 +105,7 @@ header h2 {
         font-size: 11px;
     }
     #message {
-        padding: 24px 12.5%;
+        padding: 24px 15%;
     }
 }
 
@@ -136,14 +140,14 @@ header h2 {
     }
     .message-container button {
         margin-top: 215px;
-        margin-bottom: 50px;
+        margin-bottom: 45px;
         font-size: 3.5rem;
         width: 180px;
         height: 70px;
     }
     .message-container button:active {
         margin-top: 220px;
-        margin-bottom: 45px;
+        margin-bottom: 40px;
         font-size: 3.2rem;
     }
     .message-container {
